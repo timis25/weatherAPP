@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0v9-II-ZVj">
+                                <rect key="frame" x="0.0" y="248" width="414" height="648"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexColor" name="AccentColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="114" id="Wp5-fd-Gbj" customClass="TableViewCell" customModule="weatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wp5-fd-Gbj" id="Ffa-uG-Sih">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="N38-Vm-oIz">
+                                                    <rect key="frame" x="321" y="19" width="41.5" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="41.5" id="q9h-yE-Dqw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m83-wq-C6c">
+                                                    <rect key="frame" x="20" y="19" width="293" height="64"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="m83-wq-C6c" secondAttribute="bottom" constant="34" id="5g5-hh-S30"/>
+                                                <constraint firstItem="N38-Vm-oIz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m83-wq-C6c" secondAttribute="trailing" constant="8" symbolic="YES" id="8qv-4j-VI0"/>
+                                                <constraint firstItem="m83-wq-C6c" firstAttribute="leading" secondItem="Ffa-uG-Sih" secondAttribute="leadingMargin" id="B2T-SD-pPU"/>
+                                                <constraint firstItem="N38-Vm-oIz" firstAttribute="top" secondItem="Ffa-uG-Sih" secondAttribute="topMargin" constant="8" id="F92-Hd-wYW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="N38-Vm-oIz" secondAttribute="trailing" constant="31.5" id="NDf-2a-0pq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="N38-Vm-oIz" secondAttribute="bottom" constant="20" id="m5s-jX-BsK"/>
+                                                <constraint firstItem="m83-wq-C6c" firstAttribute="top" secondItem="Ffa-uG-Sih" secondAttribute="topMargin" constant="21" id="vm1-sr-QuC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="degreesLabel" destination="N38-Vm-oIz" id="PMw-RO-IDD"/>
+                                            <outlet property="weatherLabel" destination="m83-wq-C6c" id="tfT-VK-BAl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="deqrees" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-jB-0G7">
+                                <rect key="frame" x="114" y="103" width="194" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h8k-jB-0G7" secondAttribute="trailing" constant="159" id="B1D-44-jhi"/>
+                            <constraint firstItem="0v9-II-ZVj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BwB-zi-X4X"/>
+                            <constraint firstAttribute="bottom" secondItem="0v9-II-ZVj" secondAttribute="bottom" id="CGI-YL-Mry"/>
+                            <constraint firstItem="0v9-II-ZVj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="204" id="CIt-9l-mF8"/>
+                            <constraint firstAttribute="bottom" secondItem="0v9-II-ZVj" secondAttribute="bottom" id="a0g-Dj-PhD"/>
+                            <constraint firstItem="h8k-jB-0G7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="gJq-4F-5HB"/>
+                            <constraint firstItem="0v9-II-ZVj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h4G-Qc-i49"/>
+                            <constraint firstItem="0v9-II-ZVj" firstAttribute="top" secondItem="h8k-jB-0G7" secondAttribute="bottom" constant="89" id="m2H-Dj-lIh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainDegreesLabel" destination="h8k-jB-0G7" id="Yvc-CO-dqc"/>
+                        <outlet property="weatherTable" destination="0v9-II-ZVj" id="5fZ-oz-PSw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
